@@ -50,6 +50,10 @@ namespace Practice_1
             //50번//52번//53번
             if (num1 == num2) Console.WriteLine("1");
             else Console.WriteLine("0");
+            //54번,55번
+            if (num1 > 0 && num2 > 0) Console.WriteLine("true");
+            if (num1 < 0 || num2 > 0) Console.WriteLine("true");
+            //56생략
 
         }
     }

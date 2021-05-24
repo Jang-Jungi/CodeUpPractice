@@ -53,8 +53,48 @@ namespace Practice_1
             //54번,55번
             if (num1 > 0 && num2 > 0) Console.WriteLine("true");
             if (num1 < 0 || num2 > 0) Console.WriteLine("true");
-            //56생략
-
+            //56~62 생략 비트연산자
+            //63번 조건연산자//64 생략
+            string result = (f > g) ? "1" : "0";
+            Console.WriteLine($"참이면 1 거짓은 0 : {result}");
+            //65번,66번
+            if (e%2==0){ Console.WriteLine($"{e},{true}"); } else Console.WriteLine($"{e},{false}");
+            if (c % 2 == 0) { Console.WriteLine($"{c},{true}"); } else Console.WriteLine($"{c},{false}");
+            if (g%3==0){ Console.WriteLine($"{g},{true}"); } else Console.WriteLine($"{g},{false}");
+            //67번
+            if (num2 > 0)
+            {
+                if (num2 % 2 == 0)
+                {
+                    Console.Write("even, ");
+                }
+                Console.WriteLine("plus");
+            }
+            else Console.WriteLine("odd, minus");
+            //68번//69번
+            Console.WriteLine("0~100까지 점수를 입력하세요");
+            int input = Int32.Parse(Console.ReadLine());
+            string grade = null;
+            if (input > 100)  Console.WriteLine("값을 잘못 입력하셨습니다.");
+            else if (input>=90){Console.WriteLine("A입니다."); grade = "A"; }
+            else if (input>=70){Console.WriteLine("B입니다."); grade = "B"; }
+            else if (input>=40){Console.WriteLine("C입니다."); grade = "C"; }
+            else {Console.WriteLine("D입니다."); grade = "D"; }
+            switch(Convert.ToChar(grade))// A,B,C,D를 아스키 코드로 변환
+            {
+                case 'A':
+                    Console.WriteLine("best!!!");
+                    break;
+                case 'B':
+                    Console.WriteLine("good!!");
+                    break;
+                case 'C':
+                    Console.WriteLine("run!");
+                    break;
+                default:
+                    Console.WriteLine("slowly");
+                    break;
+            }
         }
     }
 }
